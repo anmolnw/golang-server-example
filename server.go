@@ -7,8 +7,8 @@ import (
 )
 
 type User struct {
-	Name string `json:"Name"`
-	Age  int    `json:"Age"`
+	Name string `json:"name"`
+	Age  int    `json:"age"`
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -46,4 +46,4 @@ func main() {
 	http.ListenAndServe("localhost:8080", nil)
 }
 
-//curl -v -H "Content-type:application/json" -d '{"Name="Anmol", "Age"="23"}' -X POST http://localhost:8080/xyz
+//curl -v -H "Content-type:application/json" -d '{"name"="Anmol", "age"=23}' -X POST http://localhost:8080/xyz
